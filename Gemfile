@@ -31,7 +31,7 @@ gem 'wkhtmltopdf-binary', :platforms => :ruby
 gem 'combine_pdf'
 
 gem 'activerecord-session_store'
-gem 'devise', "~> 4.3.0"
+gem 'devise', "~> 4.7.1"
 gem 'rack-cors'
 
 gem 'newrelic_rpm'
