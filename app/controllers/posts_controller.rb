@@ -45,6 +45,19 @@ class PostsController < ApplicationController
     redirect_to posts_url, notice: 'Post was successfully destroyed.'
   end
 
+  def activate
+    @post = Post.find params[:id]
+    @post.update_attribute(:state, "Published")
+    redirect_to @post
+  end
+
+
+  def archive
+    @post = Post.find params[:id]
+    @post.update_attribute(:state, "Archive")
+    redirect_to @post
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
